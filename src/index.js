@@ -3,18 +3,6 @@ import React from 'react';
 import AppComponent from 'flow-app-component';
 
 class MapComponent extends AppComponent {
-  static properties = {
-    iconUrl: '/assets/images/map-component.png',
-    name: 'Map',
-    type: 'ui-component',
-    componentType: 'map',
-    category: 'Views',
-    parent: null,
-    showOnComponentsPanel: true,
-    isValuable: true,
-    allowsChildren: false
-  };
-
   constructor() {
     super();
     const newState = {
@@ -38,8 +26,15 @@ class MapComponent extends AppComponent {
           ],
         },
       ],
-
-      ...MapComponent.properties
+      iconUrl: '/assets/images/map-component.png',
+      name: 'Map',
+      type: 'ui-component',
+      componentType: 'map',
+      category: 'Views',
+      parent: null,
+      showOnComponentsPanel: true,
+      isValuable: true,
+      allowsChildren: false,
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
